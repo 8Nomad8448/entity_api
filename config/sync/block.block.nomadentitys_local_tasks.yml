@@ -1,0 +1,22 @@
+uuid: 6967b9f8-2f08-4cbb-9c1b-042ea455a6e3
+langcode: en
+status: false
+dependencies:
+  theme:
+    - nomadentitys
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: nomadentitys_local_tasks
+theme: nomadentitys
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

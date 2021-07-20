@@ -1,0 +1,22 @@
+uuid: 0eb7ae46-ebfd-48d1-99d8-cc1523a28bce
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nomadentitys
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: nomadentitys_content
+theme: nomadentitys
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
