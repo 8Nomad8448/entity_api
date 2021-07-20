@@ -1,0 +1,23 @@
+uuid: d7125213-bfef-4601-b16a-b5d4c2325816
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - nomad
+_core:
+  default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
+id: nomad_search
+theme: nomad
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: node_search
+visibility: {  }
