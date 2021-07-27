@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * File for hooks implementing.
+ */
+
+/**
+ * Implementing hook for creating styles to the admin panel.
+ */
+function nomad_preprocess_page(&$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if ($route_name == 'entity.nomad.collection' || $route_name == "entity.nomad.edit_form") {
+    $variables['#attached']['library'][] = 'nomad/gests-style';
+  }
+}
+
+/**
+ * Implementing hook for creating twig markup.
+ */
+function nomad_theme($existing, $type, $theme, $path) {
+  return [
+    'nomad_twig' => [
+      'type' => 'module',
+      'variables' => [
+        'items' => [],
+        'title' => '',
+        'markup' => '',
+        'form' => [],
+        'root' => [],
+      ],
+    ],
+  ];
+}

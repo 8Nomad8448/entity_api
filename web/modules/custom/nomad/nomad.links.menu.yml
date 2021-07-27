@@ -1,0 +1,6 @@
+entity.nomad.collection:
+  title: 'Guest list'
+  description: 'Displays admin page with guest book in structure'
+  route_name: entity.nomad.collection
+  parent: system.admin_structure
+  weight: -100

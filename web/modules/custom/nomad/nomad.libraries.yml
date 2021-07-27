@@ -1,0 +1,12 @@
+gests-style:
+  version: VERSION
+  css:
+    component:
+      css/gests.css: {}
+  js:
+    js/modal.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupal.dialog.ajax

@@ -1,0 +1,53 @@
+{{ attach_library('nomad/gests-style') }}
+{{ attach_library('core/drupal.dialog.ajax') }}
+
+<div class="row">
+  <h5>{{ markup }}</h5>
+  <div class="col-12">
+    {{ form }}
+  </div>
+</div>
+  {% for item in items %}
+  <div class="dboutput_wrapper row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gests">
+      <span class="gests_avatar"><a href="{{ item.Avatar__target_id }}" target="_blank"><img src="{{ item.Avatar__target_id }}" title="User chosen avatar" alt="user avatar"></a></span>
+      <div>
+        <span class="titles">{{ "Name:"|trans }}</span>
+        <p class="gests_name">{{ item.Name }}</p>
+        <span class="titles">{{ "Created:"|trans }}</span>
+        <p class="gests_created"> {{ item.Date }}</p>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gests_image">
+      <p class="titles">{{ "Message:"|trans }}</p>
+      <p class="gests_comment"> {{ item.Feedback__value }}</p>
+      <div>
+        {% if item.Image__target_id %}
+          <a href="{{ item.Image__target_id }}" target="_blank">
+            <img src='{{ item.Image__target_id }}' alt="Photo that user decided to add">
+          </a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 gests_contacts">
+      <div>
+        <p class="titles">{{ "Gest email:"|trans }}</p>
+        <p class="gests_email"> {{ item.Email }}</p>
+        <br>
+        <p class="titles">{{ "Contact phone:"|trans }}</p>
+        <p class="gests_phone"> {{ item.Phone }}</p>
+        <br>
+        {% if user.hasPermission('administer nodes') %}
+          <br>
+          <span class="rm_btn">
+            <a href="/admin/content/nomad/manage/delete/{{ item.id }}?destination={{ root }}" class="rm_button use-ajax" data-dialog-type="modal">{{ "remove"|trans }}</a>
+            <a href="/admin/content/nomad/manage/{{ item.id }}?destination={{ root }}" class="edit_button">{{ "edit"|trans }}</a>
+          </span>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+  {% endfor %}
+
+

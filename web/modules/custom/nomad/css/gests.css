@@ -1,0 +1,526 @@
+h5 {
+  padding: 0 15px;
+}
+.path-nomad,
+.path-nomad #page,
+.path-nomad #page main {
+  background: #f1f1f1;
+}
+.path-nomad #page input {
+  width: 100%;
+}
+.path-nomad #page .form-file,
+.path-nomad #page .button {
+  width: fit-content;
+}
+.form-type-managed-file {
+  margin-top: 1rem;
+}
+.form-textarea-wrapper #edit-feedback {
+  max-height: 4.5rem;
+}
+/*
+========= Admin modal styles
+*/
+#myModal .modal-content {
+  padding: 0 0 20px 0;
+  border-radius: 5px;
+}
+.modal-content h3 {
+  padding: 15px;
+  margin: 0;
+  color: #fff;
+  background: #6291ec;
+  border-radius: 5px;
+}
+.modal-content p {
+  margin: 1em 0;
+  padding: 15px;
+  font-style: italic;
+}
+.modal-content .close {
+  color: #fff;
+  border-radius: 5px;
+}
+.path-admin .ui-dialog {
+  position: fixed;
+  z-index: 101;
+  border-radius: 8px;
+  width: 30%;
+}
+.path-admin .ui-dialog .ui-dialog-titlebar {
+  background: #6c5aff;
+}
+.path-admin .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset .button--primary {
+  background: #5b67f9;
+  color: #fff;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+/*
+========= Admin table styles
+*/
+tr td .image-style-medium,
+tr td .image-style-thumbnail,
+tr td .image-style-large {
+  border-radius: 8px;
+}
+#edit-table tr td:nth-child(4n-1) {
+  max-width: 25ch;
+  word-break: break-word;
+}
+#edit-table tr {
+  background: #343a40;
+  border-bottom: 1px solid #a2afe3;
+  color: #fff;
+  transition-timing-function: ease-in-out;
+  transition: .8s;
+}
+#edit-table tr:nth-child(2n) {
+  background: #364554;
+  transition-timing-function: ease-in-out;
+  transition: .8s;
+}
+.path-admin #edit-table tr:hover,
+.path-admin #edit-table tr:focus {
+  background: #6d7e90;
+  transition-timing-function: ease-in-out;
+  transition: .8s;
+}
+.path-admin #edit-table tbody .selected td {
+  background: #2e76c3d4;
+  transition-timing-function: ease-in-out;
+  transition: .8s;
+}
+.path-admin .ui-dialog-buttons .ui-dialog-titlebar,
+.path-admin .ui-dialog-buttons .ui-widget-content.ui-dialog-content,
+.path-admin .ui-dialog-buttons .ui-dialog-buttonpane {
+  background: #343a40;
+}
+.path-admin .nomad-form .form-wrapper .form-text,
+.path-admin .nomad-form .form-wrapper .form-email {
+  width: 100%;
+}
+.path-admin .nomad-form .form-wrapper .form-file,
+.path-admin .nomad-form .form-wrapper .button {
+  width: fit-content;
+}
+#myBtn {
+  z-index: 0;
+  margin-top: 30px;
+}
+/*
+========= User form styles
+*/
+/*
+--------- Buttons
+*/
+.nomad-name-form .btn-primary {
+  background-color: #5f9e53;
+  border-color: #5f9e53;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.nomad-name-form .btn-primary:hover {
+  background-color: #4a00ff;
+  border-color: #4a00ff;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.path-nomad .guests_list_form input {
+  width: 100%;
+  border-radius: 5px;
+}
+.path-nomad .guests_list_form .button {
+  width: fit-content;
+  border-radius: 15px;
+}
+.path-nomad .guests_list_form .form-file {
+  padding: .5rem .25rem;
+}
+.path-nomad .guests_list_form {
+  margin-bottom: 2rem;
+}
+/*
+--------- Wrapper and borders
+*/
+.dboutput_wrapper {
+  background: #343a40;
+  border-radius: 10px;
+  margin: 4em 0;
+  padding: 1em .6em;
+  border-bottom: 5px solid #42ba7bff;
+  box-shadow: 0 -4px 6px 0 rgba(34, 60, 80, 0.2);
+}
+.dboutput_wrapper:nth-child(2n) {
+  background: #263544;
+}
+.dboutput_wrapper:last-child {
+  border: none;
+}
+/*
+--------- Regions blocks and elements style
+*/
+.region-featured-top div:nth-child(2) {
+  width: 100%;
+  margin: .5em 1.65em;
+}
+.path-nomad .highlighted {
+  padding-top: 1.5rem;
+}
+.path-nomad .site-footer {
+  margin-top: 1.5rem;
+}
+.path-nomad #main {
+  margin-bottom: 0;
+}
+.path-nomad .alert-dismissible .btn-close {
+  display: none;
+}
+
+.gests {
+  display: inline-flex;
+  justify-content: flex-start;
+  word-break: break-word;
+  padding: 1rem 0;
+  border-bottom: 1px solid #b8d5f1;
+  width: 100%;
+}
+.gests span {
+  margin: 0 .5rem;
+}
+.gests p {
+  padding: 0 .5rem;
+}
+.gests .titles,
+.gests_image .titles,
+.gests_contacts .titles {
+  font-weight: bold;
+  color: aquamarine;
+}
+.gests a,
+.gests a:hover {
+  text-decoration: none;
+  border: none;
+}
+.gests_image {
+  padding: 1rem 0;
+  word-break: break-word;
+}
+.gests_image a,
+.gests_image a:hover {
+  text-decoration: none;
+  border: none;
+}
+.gests .gests_name,
+.gests .gests_created,
+.gests_contacts .gests_email,
+.gests_contacts .gests_phone {
+  font-style: italic;
+  color: #fff;
+}
+.gests_comment {
+  color: #fff;
+}
+.gests .gests_avatar img {
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+}
+.gests_contacts .rm_btn {
+  display: flex;
+  width: 45%;
+  align-self: flex-end;
+  justify-content: space-between;
+  margin-top: auto;
+}
+.gests_contacts .rm_btn .rm_button {
+  background: #de0321;
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.gests_contacts .rm_btn .rm_button:hover {
+  background: #902a38;
+  color: #fff;
+  text-decoration: none;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.gests_contacts .rm_btn .edit_button {
+  background: #247edc;
+  color: #fff;
+  padding: .5em 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.gests_contacts .rm_btn .edit_button:hover {
+  background: aquamarine;
+  color: #fff;
+  text-decoration: none;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.gests_contacts div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.gests_created {
+  font-style: italic;
+}
+.gests_image div {
+  display: flex;
+  justify-content: center;
+}
+.gests_image img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+}
+/*
+========= User form modal styles
+*/
+.ui-dialog {
+  z-index: 101;
+  width: 50%!important;
+  text-align: left;
+  top: 7%!important;
+  border-radius: 8px!important;
+}
+.path-nomad .ui-dialog #reverse {
+  display: inline-flex;
+  width: fit-content;
+}
+.path-nomad .ui-dialog button {
+  border-color: transparent;
+  background: #0079c0;
+  color: #fff;
+  font-weight: bold;
+  padding: .35em 1.65em;
+}
+.path-nomad .ui-dialog button:hover {
+  background: #00598d;
+  border-color: #00598d;
+}
+.path-nomad .ui-dialog .form-textarea-wrapper .resize-vertical {
+  max-height: 9rem;
+}
+.path-nomad .ui-dialog .form-file {
+  padding-bottom: 2.25rem;
+}
+.path-nomad .ui-widget-content,
+.path-nomad .ui-widget.ui-widget-content {
+  border: none;
+}
+.path-nomad .ui-dialog {
+  background: #f1f1f1;
+}
+.ui-dialog-buttons,
+.ui-dialog-buttons .ui-dialog-buttonpane {
+  color: #fff;
+  background: #343a40!important;
+  top: 35%!important;
+  border-radius: 8px;
+  padding: 10px;
+}
+.path-admin .ui-dialog {
+  position: fixed;
+  z-index: 101;
+  width: 40%!important;
+  text-align: left;
+}
+.path-admin #drupal-modal {
+  border-radius: 8px;
+}
+.path-admin .ui-dialog input {
+  width: 100%;
+  border-radius: 5px;
+  padding: .5rem;
+}
+.path-admin .ui-dialog .form-textarea {
+  max-height: 6.5rem;
+}
+.path-admin .ui-dialog .button {
+  width: fit-content;
+  border-radius: 15px;
+  padding: .45rem 1.65rem;
+}
+.path-admin .ui-dialog .ui-dialog-titlebar .ui-dialog-title,
+.path-nomad .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+  color: aquamarine;
+}
+.ui-dialog .ui-dialog-titlebar {
+  display: none;
+}
+.path-nomad .ui-dialog-buttons .ui-dialog-titlebar,
+.path-admin .ui-dialog-buttons .ui-dialog-titlebar {
+  display: flex;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid aquamarine;
+  border-radius: 0;
+}
+.ui-dialog .confirm-delete-form {
+  margin-top: 1rem;
+  color: #fff;
+}
+.ui-dialog .confirm-delete-form .form-actions {
+  margin-top: 1rem;
+}
+.ui-dialog .confirm-delete-form .form-actions .form-submit {
+  color: #fff;
+  background: #ac0606;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.ui-dialog .confirm-delete-form .form-actions .form-submit:hover {
+  color: #fff;
+  background: #680303;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.ui-dialog .ui-dialog-buttonpane .form-actions .button {
+  color: #333;
+  background: #fff;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.ui-dialog .ui-dialog-buttonpane .form-actions .button:hover {
+  color: #fff;
+  background: aquamarine;
+  transition: .6s;
+  transition-timing-function: ease-in-out;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  display: none;
+}
+.ui-dialog .button:hover,
+.ui-dialog .button:focus,
+.ui-dialog .button:active {
+  outline: none;
+  box-shadow: none;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.path-nomad .guests_list_form .form-item-avatar .form-control,
+.path-nomad .guests_list_form .form-item-image .form-control {
+  padding-bottom: 2.25rem;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.path-admin main table tbody td .default-avatar {
+  max-width: 100px;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+/* Modal adaptive */
+@media (max-width: 2560px) {
+  .gests_contacts .rm_btn {
+    width: 25%;
+  }
+}
+@media (max-width: 991px) {
+  .gests {
+    margin-top: 1em;
+  }
+  .gests_contacts .rm_btn {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .gests_image a,
+  .gests_image img {
+    width: 100%;
+  }
+  .gests_contacts p {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 798px) {
+  .gests_contacts .rm_btn {
+    width: 60%;
+  }
+}
+@media (max-width: 630px) {
+  .gests_contacts .rm_btn {
+    width: 60%;
+  }
+}
+@media (max-width: 532px) {
+  .gests {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+@media (max-width: 480px) {
+  .gests_contacts .rm_btn {
+    width: 60%;
+  }
+}
+@media (max-width: 420px) {
+  .gests_contacts .rm_btn {
+    width: 80%;
+  }
+}
+@media (max-width: 360px) {
+  .gests_contacts .rm_btn {
+    width: 100%;
+  }
+}
