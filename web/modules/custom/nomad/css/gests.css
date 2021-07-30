@@ -42,21 +42,6 @@ h5 {
   color: #fff;
   border-radius: 5px;
 }
-.path-admin .ui-dialog {
-  position: fixed;
-  z-index: 101;
-  border-radius: 8px;
-  width: 30%;
-}
-.path-admin .ui-dialog .ui-dialog-titlebar {
-  background: #6c5aff;
-}
-.path-admin .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset .button--primary {
-  background: #5b67f9;
-  color: #fff;
-  transition: .6s;
-  transition-timing-function: ease-in-out;
-}
 /*
 ========= Admin table styles
 */
@@ -65,49 +50,13 @@ tr td .image-style-thumbnail,
 tr td .image-style-large {
   border-radius: 8px;
 }
-#edit-table tr td:nth-child(4n-1) {
+.path-admin table tr td:nth-child(5n-1) {
   max-width: 25ch;
   word-break: break-word;
 }
-#edit-table tr {
-  background: #343a40;
-  border-bottom: 1px solid #a2afe3;
-  color: #fff;
-  transition-timing-function: ease-in-out;
-  transition: .8s;
-}
-#edit-table tr:nth-child(2n) {
-  background: #364554;
-  transition-timing-function: ease-in-out;
-  transition: .8s;
-}
-.path-admin #edit-table tr:hover,
-.path-admin #edit-table tr:focus {
-  background: #6d7e90;
-  transition-timing-function: ease-in-out;
-  transition: .8s;
-}
-.path-admin #edit-table tbody .selected td {
-  background: #2e76c3d4;
-  transition-timing-function: ease-in-out;
-  transition: .8s;
-}
-.path-admin .ui-dialog-buttons .ui-dialog-titlebar,
-.path-admin .ui-dialog-buttons .ui-widget-content.ui-dialog-content,
-.path-admin .ui-dialog-buttons .ui-dialog-buttonpane {
-  background: #343a40;
-}
-.path-admin .nomad-form .form-wrapper .form-text,
-.path-admin .nomad-form .form-wrapper .form-email {
-  width: 100%;
-}
-.path-admin .nomad-form .form-wrapper .form-file,
-.path-admin .nomad-form .form-wrapper .button {
-  width: fit-content;
-}
-#myBtn {
-  z-index: 0;
-  margin-top: 30px;
+.path-admin table tr td:nth-child(5n-1) {
+  max-width: 25ch;
+  word-break: break-word;
 }
 /*
 ========= User form styles
@@ -212,6 +161,9 @@ tr td .image-style-large {
   text-decoration: none;
   border: none;
 }
+.gests_image p {
+  color: #fff;
+}
 .gests .gests_name,
 .gests .gests_created,
 .gests_contacts .gests_email,
@@ -308,20 +260,20 @@ tr td .image-style-large {
   top: 7%!important;
   border-radius: 8px!important;
 }
-.path-nomad .ui-dialog #reverse {
-  display: inline-flex;
-  width: fit-content;
-}
 .path-nomad .ui-dialog button {
   border-color: transparent;
   background: #0079c0;
   color: #fff;
   font-weight: bold;
   padding: .35em 1.65em;
+  transition: .8s;
+  transition-timing-function: ease-in-out;
 }
 .path-nomad .ui-dialog button:hover {
   background: #00598d;
   border-color: #00598d;
+  transition: .8s;
+  transition-timing-function: ease-in-out;
 }
 .path-nomad .ui-dialog .form-textarea-wrapper .resize-vertical {
   max-height: 9rem;
@@ -344,37 +296,10 @@ tr td .image-style-large {
   border-radius: 8px;
   padding: 10px;
 }
-.path-admin .ui-dialog {
-  position: fixed;
-  z-index: 101;
-  width: 40%!important;
-  text-align: left;
-}
-.path-admin #drupal-modal {
-  border-radius: 8px;
-}
-.path-admin .ui-dialog input {
-  width: 100%;
-  border-radius: 5px;
-  padding: .5rem;
-}
-.path-admin .ui-dialog .form-textarea {
-  max-height: 6.5rem;
-}
-.path-admin .ui-dialog .button {
-  width: fit-content;
-  border-radius: 15px;
-  padding: .45rem 1.65rem;
-}
-.path-admin .ui-dialog .ui-dialog-titlebar .ui-dialog-title,
-.path-nomad .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
-  color: aquamarine;
-}
 .ui-dialog .ui-dialog-titlebar {
   display: none;
 }
-.path-nomad .ui-dialog-buttons .ui-dialog-titlebar,
-.path-admin .ui-dialog-buttons .ui-dialog-titlebar {
+.path-nomad .ui-dialog-buttons .ui-dialog-titlebar {
   display: flex;
   color: #fff;
   background: transparent;
@@ -382,24 +307,12 @@ tr td .image-style-large {
   border-bottom: 1px solid aquamarine;
   border-radius: 0;
 }
-.ui-dialog .confirm-delete-form {
+.ui-dialog form {
   margin-top: 1rem;
   color: #fff;
 }
-.ui-dialog .confirm-delete-form .form-actions {
-  margin-top: 1rem;
-}
-.ui-dialog .confirm-delete-form .form-actions .form-submit {
-  color: #fff;
-  background: #ac0606;
-  transition: .6s;
-  transition-timing-function: ease-in-out;
-}
-.ui-dialog .confirm-delete-form .form-actions .form-submit:hover {
-  color: #fff;
-  background: #680303;
-  transition: .6s;
-  transition-timing-function: ease-in-out;
+.ui-dialog form .form-actions {
+  margin-top: 3rem;
 }
 .ui-dialog .ui-dialog-buttonpane .form-actions .button {
   color: #333;
@@ -422,53 +335,7 @@ tr td .image-style-large {
   outline: none;
   box-shadow: none;
 }
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-.path-nomad .guests_list_form .form-item-avatar .form-control,
-.path-nomad .guests_list_form .form-item-image .form-control {
-  padding-bottom: 2.25rem;
-}
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-.path-admin main table tbody td .default-avatar {
-  max-width: 100px;
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-}
-/* Modal adaptive */
+/* !-- Adaptation css -- */
 @media (max-width: 2560px) {
   .gests_contacts .rm_btn {
     width: 25%;

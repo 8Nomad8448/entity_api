@@ -16,9 +16,6 @@ use Drupal\user\EntityOwnerTrait;
  * @ContentEntityType(
  *   id = "nomad",
  *   label = @Translation("Nomad"),
- *   label_collection = @Translation("Nomads"),
- *   label_singular = @Translation("nomad"),
- *   label_plural = @Translation("nomads"),
  *   base_table = "nomad",
  *   entity_keys = {
  *     "id" = "id",
@@ -37,14 +34,9 @@ use Drupal\user\EntityOwnerTrait;
  *     "route_provider" = {
  *       "default" = "Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider",
  *     },
- *     "list_builder" = "Drupal\nomad\Controller\NomadAdminController",
- *     "local_action_provider" = {
- *       "collection" = "Drupal\entity\Menu\EntityCollectionLocalActionProvider",
- *     },
  *   },
  *   links = {
  *     "canonical" = "/nomad/guests/{nomad}",
- *     "collection" = "/admin/content/nomads",
  *     "add-form" = "/admin/content/nomad/add",
  *     "edit-form" = "/admin/content/nomad/manage/{nomad}",
  *     "delete-form" = "/admin/content/nomad/manage/delete/{nomad}",
@@ -90,6 +82,7 @@ class Nomad extends ContentEntityBase implements EntityOwnerInterface, EntityPub
       maximum 100.'))
       ->setRevisionable(TRUE)
       ->setTranslatable(TRUE)
+      ->addConstraint('NameValidation')
       ->setSettings([
         'max_length' => '100',
         'size' => '101',
@@ -119,7 +112,7 @@ class Nomad extends ContentEntityBase implements EntityOwnerInterface, EntityPub
       ])
       ->setRequired(TRUE);
 
-    $fields['Feedback'] = BaseFieldDefinition::create('text_long')
+    $fields['Feedback'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Message'))
       ->setRevisionable(TRUE)
       ->setTranslatable(TRUE)
@@ -160,6 +153,7 @@ class Nomad extends ContentEntityBase implements EntityOwnerInterface, EntityPub
       ->setDescription(t('Please enter your email.'))
       ->setRevisionable(TRUE)
       ->setTranslatable(TRUE)
+      ->addConstraint('EmailValidation')
       ->setDisplayOptions('form', [
         'weight' => 5,
       ])
@@ -174,6 +168,7 @@ class Nomad extends ContentEntityBase implements EntityOwnerInterface, EntityPub
       ->setDescription(t('Please add your phone number.'))
       ->setRevisionable(TRUE)
       ->setTranslatable(TRUE)
+      ->addConstraint('PhoneValidation')
       ->setDisplayOptions('form', [
         'weight' => 6,
       ])

@@ -26,7 +26,7 @@ class NomadController extends ControllerBase {
   protected $entitymanager;
 
   /**
-   * Using form-builder to create a from pulled with dependency injection.
+   * Using form-builder to create a form pulled with dependency injection.
    */
   public static function create(ContainerInterface $container) {
     $instance = parent::create($container);
@@ -36,7 +36,7 @@ class NomadController extends ControllerBase {
   }
 
   /**
-   * Getting before created form, from Nomadform.php.
+   * Getting before created entity form, from /admin/content/nomad/add.
    */
   public function myform() {
     $entity = $this->entitymanager->getStorage("nomad")->create([
@@ -96,9 +96,13 @@ class NomadController extends ControllerBase {
       else {
         $url = '';
       }
+      $entry['Feedback__value'] = [
+        '#markup' => $entry['Feedback__value'],
+      ];
       $rows[$key]['Image__target_id'] = $url;
       $rows[$key]['Avatar__target_id'] = $avatarurl;
       $rows[$key]['Date'] = $timeformat;
+      $rows[$key]['Feedback__value'] = \Drupal::service('renderer')->render($entry['Feedback__value']);
     }
     // Use my form, by loaded by dependency injection,
     // and get destination for redirect after form submit.

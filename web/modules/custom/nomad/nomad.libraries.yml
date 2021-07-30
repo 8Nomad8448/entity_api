@@ -3,8 +3,6 @@ gests-style:
   css:
     component:
       css/gests.css: {}
-  js:
-    js/modal.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once

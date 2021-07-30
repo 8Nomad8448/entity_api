@@ -10,7 +10,7 @@
  */
 function nomad_preprocess_page(&$variables) {
   $route_name = \Drupal::routeMatch()->getRouteName();
-  if ($route_name == 'entity.nomad.collection' || $route_name == "entity.nomad.edit_form") {
+  if ($route_name == "entity.nomad.edit_form") {
     $variables['#attached']['library'][] = 'nomad/gests-style';
   }
 }
