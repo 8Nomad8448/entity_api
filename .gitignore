@@ -21,4 +21,4 @@
 /.env
 
 # Ignore node modules
-/web/themes/custom/exam/node_modules
+/web/themes/custom/nomadentitys/node_modules
