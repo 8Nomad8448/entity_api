@@ -1,0 +1,20 @@
+uuid: 308291dd-9d23-4704-ac32-d04432b0a440
+langcode: en
+status: true
+dependencies:
+  theme:
+    - entitymodule
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: entitymodule_page_title
+theme: entitymodule
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 83e814e4-0fba-4e0e-9b82-8822194c9909
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - nomadentitys
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: nomadentitys_breadcrumbs
+theme: nomadentitys
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

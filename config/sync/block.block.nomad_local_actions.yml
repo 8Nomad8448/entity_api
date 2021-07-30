@@ -1,0 +1,20 @@
+uuid: 7b9a8b5a-e7d9-4dcc-bfb5-5bdad362a0ae
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nomad
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: nomad_local_actions
+theme: nomad
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

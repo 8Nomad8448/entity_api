@@ -1,0 +1,22 @@
+uuid: e3975310-d7c6-42e0-b776-1b40ba56daf4
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - nomad
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: nomad_breadcrumbs
+theme: nomad
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,7 @@
+nomad.content:
+  path: '/nomad/guests'
+  defaults:
+    _controller: 'Drupal\nomad\Controller\NomadController::report'
+    _title: 'Hello! You can leave your feedback here.'
+  requirements:
+    _permission: 'access content'

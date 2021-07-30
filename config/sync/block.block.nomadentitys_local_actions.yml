@@ -1,0 +1,20 @@
+uuid: 09c51795-a63c-4250-8060-a3c689b2c9bc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nomadentitys
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: nomadentitys_local_actions
+theme: nomadentitys
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

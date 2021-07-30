@@ -1,0 +1,22 @@
+uuid: 9d1d56af-7bae-42a9-975c-79a7d5262c0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - entitymodule
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: entitymodule_messages
+theme: entitymodule
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 65873a93-b4cc-4db7-8f7a-c593e7e68bc0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - entitymodule
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: entitymodule_content
+theme: entitymodule
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
