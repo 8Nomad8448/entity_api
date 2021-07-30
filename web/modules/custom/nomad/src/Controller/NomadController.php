@@ -55,7 +55,7 @@ class NomadController extends ControllerBase {
     $db = \Drupal::service('database');
     $select = $db->select('nomad', 'r');
     $select->fields('r', ['Avatar__target_id', 'Name', 'Email',
-      'Phone', 'Date', 'Feedback__value',
+      'Phone', 'Date', 'Feedback',
       'Image__target_id', 'id',
     ]);
     $select->orderBy('Date', 'DESC');
@@ -96,13 +96,13 @@ class NomadController extends ControllerBase {
       else {
         $url = '';
       }
-      $entry['Feedback__value'] = [
-        '#markup' => $entry['Feedback__value'],
+      $entry['Feedback'] = [
+        '#markup' => $entry['Feedback'],
       ];
       $rows[$key]['Image__target_id'] = $url;
       $rows[$key]['Avatar__target_id'] = $avatarurl;
       $rows[$key]['Date'] = $timeformat;
-      $rows[$key]['Feedback__value'] = \Drupal::service('renderer')->render($entry['Feedback__value']);
+      $rows[$key]['Feedback'] = \Drupal::service('renderer')->render($entry['Feedback']);
     }
     // Use my form, by loaded by dependency injection,
     // and get destination for redirect after form submit.
