@@ -56,6 +56,7 @@ class Nomad extends ContentEntityBase implements EntityOwnerInterface, EntityPub
     $fields = parent::baseFieldDefinitions($entity_type);
 
     $fields['Avatar'] = BaseFieldDefinition::create('image')
+      ->setLabel(t('Avatar'))
       ->setDescription(t('You can add avatar here.'))
       ->setRevisionable(TRUE)
       ->setSettings([
@@ -127,6 +128,7 @@ class Nomad extends ContentEntityBase implements EntityOwnerInterface, EntityPub
       ->setRequired(TRUE);
 
     $fields['Image'] = BaseFieldDefinition::create('image')
+      ->setLabel(t('Image'))
       ->setDescription(t('You add some image here.'))
       ->setRevisionable(TRUE)
       ->setTranslatable(TRUE)
