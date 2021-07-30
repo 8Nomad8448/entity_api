@@ -89,7 +89,7 @@ Phone number $phone is correct.</div>
     </div>
 </div>"));
     }
-    elseif (!preg_match('/^[A-Za-z]*$/', $name) || strlen($name) < 2 || strlen($name) > 100) {
+    elseif (strlen($name) < 2 || strlen($name) > 100) {
       $response->addCommand(new HtmlCommand('#form-system-messages',
         "<div class='data-drupal-messages'>
 <div class='alert alert-dismissible fade show alert-danger messages messages--error'>The name $name is not valid.
